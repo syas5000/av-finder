@@ -4,17 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>特定商取引法に基づく表記 - AV Finder</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #333; }
-    h1 { color: #c0392b; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; vertical-align: top; }
-    th { background: #f5f5f5; width: 30%; }
-    footer { margin-top: 60px; font-size: 0.85em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
-    a { color: #c0392b; }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; vertical-align: top; font-size: 0.95em; }
+    th { background: #f5f5f5; width: 35%; }
+    @media (max-width: 480px) {
+      th, td { display: block; width: 100%; }
+      th { background: #f5f5f5; border-bottom: none; font-weight: bold; }
+    }
   </style>
 </head>
 <body>
+
+<header>
+  <a href="index.html">
+    <span class="site-title">AV Finder</span>
+    <span class="site-subtitle">あなた好みの作品をレコメンド</span>
+  </a>
+</header>
+
+<div class="container">
+
   <h1>特定商取引法に基づく表記</h1>
 
   <table>
@@ -33,5 +44,7 @@
     <a href="privacy.html">プライバシーポリシー</a><br><br>
     &copy; 2026 AV Finder
   </footer>
+
+</div>
 </body>
 </html>

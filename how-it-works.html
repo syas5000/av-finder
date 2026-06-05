@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使い方・仕組み - AV Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .flow-arrow {
+      text-align: center;
+      font-size: 1.5em;
+      color: #c0392b;
+      margin: 4px 0;
+    }
+    .choice-box {
+      display: flex;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .choice {
+      flex: 1;
+      border: 2px solid #c0392b;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .choice h3 { color: #c0392b; margin-bottom: 8px; font-size: 1em; }
+    .choice p  { font-size: 0.85em; color: #555; margin: 0; }
+    .keyword-demo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .rating-demo {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    .rating-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.9em;
+    }
+    .rating-row:last-child { border-bottom: none; }
+    .stars { color: #e67e22; letter-spacing: 2px; }
+    .rec-card {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .rec-info h3 { font-size: 0.95em; margin-bottom: 6px; }
+    .rec-score { font-size: 0.8em; color: #888; }
+    .rec-badges { margin-top: 6px; }
+    @media (max-width: 480px) {
+      .choice-box { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+    <span class="site-title">AV Finder</span>
+    <span class="site-subtitle">あなた好みの作品をレコメンド</span>
+  </a>
+</header>
+
+<div class="container">
+
+  <h1>使い方・仕組み</h1>
+  <p>AV Finderは「サンプル動画を評価するだけ」で好みを学習し、あなたにぴったりの作品をレコメンドします。</p>
+
+  <!-- STEP 1 -->
+  <h2>STEP 1：タイプを選ぶ</h2>
+  <p>まず、作品選びで重視するポイントをひとつ選んでください。</p>
+
+  <div class="choice-box">
+    <div class="choice">
+      <h3>👤 女優重視</h3>
+      <p>好きな体型・外見から<br>好みを絞り込む</p>
+    </div>
+    <div class="choice">
+      <h3>🎬 内容重視</h3>
+      <p>シチュエーションや<br>性癖から絞り込む</p>
+    </div>
+  </div>
+
+  <div class="flow-arrow">↓</div>
+
+  <!-- STEP 2 -->
+  <h2>STEP 2：キーワードを選ぶ</h2>
+  <p>選んだタイプに合ったキーワードが人気順に表示されます。好みのものをいくつか選んでください。</p>
+
+  <div class="keyword-demo">
+    <span class="tag" style="background:#fde;border:2px solid #c0392b;">✓ 巨乳</span>
+    <span class="tag">スレンダー</span>
+    <span class="tag" style="background:#fde;border:2px solid #c0392b;">✓ 熟女</span>
+    <span class="tag">ロリ</span>
+    <span class="tag">ギャル</span>
+    <span class="tag" style="background:#fde;border:2px solid #c0392b;">✓ 美少女</span>
+    <span class="tag">清楚系</span>
+    <span class="tag">ムチムチ</span>
+    <span class="tag">スポーツ系</span>
+    <span class="tag">…</span>
+  </div>
+  <p style="font-size:0.85em;color:#888;">※スクロールして好みのキーワードを探せます</p>
+
+  <div class="flow-arrow">↓</div>
+
+  <!-- STEP 3 -->
+  <h2>STEP 3：サンプル動画を★評価</h2>
+  <p>選んだキーワードに合ったサンプル動画を数本表示します。見て、3つの軸で評価してください。</p>
+
+  <div class="rating-demo">
+    <div style="font-size:0.85em;color:#888;margin-bottom:8px;">◼ 作品タイトルXXX のサンプル動画</div>
+    <div class="rating-row">
+      <span>👩 女優・見た目</span>
+      <span class="stars">★★★★☆</span>
+    </div>
+    <div class="rating-row">
+      <span>🎬 内容・シチュエーション</span>
+      <span class="stars">★★★☆☆</span>
+    </div>
+    <div class="rating-row">
+      <span>🔥 総合シコリティ</span>
+      <span class="stars">★★★★★</span>
+    </div>
+  </div>
+
+  <div class="card" style="font-size:0.9em;">
+    <strong>なぜ3軸？</strong><br>
+    「女優は好みだけど内容がイマイチ」「内容は最高だけど女優は普通」といった細かいニュアンスを学習することで、レコメンド精度が大幅に向上します。
+  </div>
+
+  <div class="flow-arrow">↓</div>
+
+  <!-- STEP 4 -->
+  <h2>STEP 4：レコメンド表示</h2>
+  <p>あなたと嗜好が似たユーザーが高く評価した作品を、スコア順に表示します。</p>
+
+  <div class="rec-card">
+    <div class="rec-info">
+      <h3>おすすめ作品タイトル A</h3>
+      <div class="rec-badges">
+        <span class="badge badge-sale">🔥 セール中 50%OFF</span>
+        <span class="badge badge-service">FANZA TV</span>
+      </div>
+    </div>
+    <div class="rec-score">スコア<br><strong style="font-size:1.4em;color:#c0392b;">4.8</strong></div>
+  </div>
+
+  <div class="rec-card">
+    <div class="rec-info">
+      <h3>おすすめ作品タイトル B</h3>
+      <div class="rec-badges">
+        <span class="badge badge-service">見放題chデラックス</span>
+        <span class="badge badge-service">個別購入</span>
+      </div>
+    </div>
+    <div class="rec-score">スコア<br><strong style="font-size:1.4em;color:#c0392b;">4.5</strong></div>
+  </div>
+
+  <div class="flow-arrow">↓</div>
+
+  <!-- STEP 5 -->
+  <h2>STEP 5：評価して精度アップ（くり返し）</h2>
+  <p>レコメンドされた作品のサンプル動画にも評価をつけることで、AIがどんどん学習。評価を重ねるほど、あなただけのレコメンドに近づいていきます。</p>
+
+  <div class="card card-accent">
+    <strong>使えば使うほど精度が上がります</strong><br>
+    初回は5本の評価からスタート。その後もレコメンド作品を評価していくことで、あなた専用の嗜好モデルが育っていきます。
+  </div>
+
+  <!-- レコメンドの仕組み -->
+  <h2>レコメンドの仕組み</h2>
+  <div class="card">
+    <p>AV Finderのレコメンドスコアは4つの要素から計算されます：</p>
+    <br>
+    <p>🤝 <strong>協調フィルタリング</strong>（重み60%）<br>あなたと嗜好が似たユーザーの評価をもとに予測</p>
+    <br>
+    <p>📊 <strong>人気度補正</strong>（重み40%）<br>コメント数・レビュー件数をベイズ平均で補正。件数が多い作品ほど信頼性が高い</p>
+    <br>
+    <p>🔥 <strong>セールブースト</strong><br>セール中の割引率に応じてスコアを上乗せ</p>
+  </div>
+
+  <footer>
+    <a href="index.html">トップページ</a> ｜
+    <a href="articles/beginners.html">初心者向けガイド</a> ｜
+    <a href="privacy.html">プライバシーポリシー</a><br><br>
+    &copy; 2026 AV Finder
+  </footer>
+
+</div>
+</body>
+</html>
