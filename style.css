@@ -1,0 +1,183 @@
+/* =============================================
+   AV Finder 共通スタイル（モバイルファースト）
+   ============================================= */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: #333;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* レイアウト */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* ヘッダー */
+header {
+  background: #1a1a1a;
+  padding: 12px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header a { text-decoration: none; }
+.site-title {
+  color: #e74c3c;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.site-subtitle {
+  color: #aaa;
+  font-size: 0.75em;
+  display: block;
+}
+
+/* 見出し */
+h1 { font-size: 1.6em; color: #c0392b; margin: 24px 0 12px; }
+h2 { font-size: 1.2em; color: #c0392b; margin: 32px 0 12px; border-bottom: 2px solid #c0392b; padding-bottom: 6px; }
+h3 { font-size: 1em; margin: 16px 0 8px; }
+p  { margin: 8px 0; }
+
+/* リンク */
+a { color: #c0392b; }
+
+/* カード */
+.card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+}
+.card-accent {
+  border-left: 4px solid #c0392b;
+}
+
+/* タグ */
+.tag {
+  display: inline-block;
+  background: #fde;
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-size: 0.82em;
+  margin: 2px;
+  color: #c0392b;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  background: #c0392b;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+.btn:hover { background: #a93226; color: #fff; }
+.btn-block { display: block; width: 100%; }
+
+/* ステップ */
+.step {
+  display: flex;
+  gap: 14px;
+  margin: 14px 0;
+  align-items: flex-start;
+}
+.step-num {
+  background: #c0392b;
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: 0.9em;
+}
+.step-body h3 { margin: 0 0 4px; font-size: 1em; }
+.step-body p  { margin: 0; font-size: 0.9em; color: #555; }
+
+/* ランキング */
+.rank-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 14px;
+  margin: 12px 0;
+}
+.rank-num {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #c0392b;
+  min-width: 44px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.rank-info h3 { margin: 0 0 4px; font-size: 0.95em; }
+.rank-info p  { margin: 0; font-size: 0.85em; color: #666; }
+
+/* ナビ */
+nav.breadcrumb {
+  font-size: 0.85em;
+  margin-bottom: 16px;
+  color: #888;
+}
+nav.breadcrumb a { color: #c0392b; text-decoration: none; }
+
+/* フッター */
+footer {
+  margin-top: 60px;
+  font-size: 0.85em;
+  color: #888;
+  border-top: 1px solid #eee;
+  padding: 20px 0;
+  text-align: center;
+}
+footer a { color: #c0392b; }
+
+/* 記事リスト */
+.article-list { list-style: none; }
+.article-list li {
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+.article-list li:last-child { border-bottom: none; }
+.article-list a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+/* サービスバッジ */
+.badge {
+  display: inline-block;
+  font-size: 0.78em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 2px;
+  font-weight: bold;
+}
+.badge-sale    { background: #e74c3c; color: #fff; }
+.badge-service { background: #eaf4fb; color: #2980b9; border: 1px solid #aed6f1; }
+
+/* PC向け調整 */
+@media (min-width: 600px) {
+  .container { padding: 40px 20px; }
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.4em; }
+  .rank-num { font-size: 2em; min-width: 54px; }
+}
